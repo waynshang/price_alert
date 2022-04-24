@@ -2,16 +2,19 @@ import os
 from communicationApp import createClient
 from controller import UniqloController
 import json 
+import config
 
 config_name = os.getenv('FLASK_CONFIG') or 'development'
 
 
 def main():
   communication_app_name= 'telegram'
-  bot_token = '1632387033:AAEgUxJiAwZBRVXwVpocXohQOxZYFhkkR6g'
+  bot_token = config.bot_token
   telegram = createClient(communication_app_name, bot_token = bot_token)
+  # TODO 
   product_code = 'u0000000011255'
   item_code = 444591
+
   params = {'product_code': product_code, 'item_code': item_code}
   uniqlo = UniqloController(params)
   product_detail = json.dumps(uniqlo.get_product_detail(), indent=2)

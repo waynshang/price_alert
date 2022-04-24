@@ -7,7 +7,6 @@ DETAIL_ALLOW_COLUMN={
 }
 HEADER = {"User-Agent":"Mozilla/5.0", 
 'Accept': '*/*', 
-'Cookie': '__cfduid=d14358f14b8ab9565814ae868b48b3e951612274817', 
 'Connection': 'keep-alive',
 'Content-Type': 'application/json'}
 
